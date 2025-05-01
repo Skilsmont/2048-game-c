@@ -52,11 +52,11 @@ To compile and execute the game:
 make        # Compile all source files
 ./a.out     # Run the compiled game
 make clean  # Delete all object files and the executable
-
+```
 ---
 
 ## 📷 Example Output
-
+```
 Score 0 Best 0
 --------------------------
 |      |   2  |      |
@@ -70,7 +70,7 @@ L/l - Move Left
 U/u - Move Up
 D/d - Move Down
 E/e - Exit
-
+```
 ---
 
 ## 🧠 What I Learned
